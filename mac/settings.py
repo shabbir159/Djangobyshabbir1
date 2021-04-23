@@ -12,14 +12,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import PIL
 from pathlib import Path
 import os
-import django_heroku
+# import django_heroku
 from django.contrib.staticfiles import storage
 
-class MyStaticFilesStorage(storage.StaticFilesStorage):
-    def __init__(self, *args, **kwargs):
-        kwargs['file_permissions_mode'] = 0o640
-        kwargs['directory_permissions_mode'] = 0o760
-        super().__init__(*args, **kwargs)
+# class MyStaticFilesStorage(storage.StaticFilesStorage):
+#     def __init__(self, *args, **kwargs):
+#         kwargs['file_permissions_mode'] = 0o640
+#         kwargs['directory_permissions_mode'] = 0o760
+#         super().__init__(*args, **kwargs)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -146,7 +146,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/

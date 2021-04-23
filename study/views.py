@@ -29,8 +29,8 @@ def business(request):
     chapters_no_sorted={}
     for i,j in chapters_no :
             chapters_no_sorted[i]=j
-    print(chapters_no)
-    print(chapters_no_sorted)
+    # print(chapters_no)
+    # print(chapters_no_sorted)
     d={'chapters':chapters,'topics':topics,'sub_topics':sub_topics,'chapters_no':chapters_no_sorted}
     # form = qa(question=b,ans=a)
     # form.save()
@@ -59,8 +59,8 @@ def economic(request):
     chapters_no_sorted={}
     for i,j in chapters_no :
             chapters_no_sorted[i]=j
-    print(chapters_no)
-    print(chapters_no_sorted)
+    #pri(chapters_no)
+    #print(chapters_no_sorted)
     d={'chapters':chapters,'topics':topics,'sub_topics':sub_topics,'chapters_no':chapters_no_sorted}
     # form = qa(question=b,ans=a)
     # form.save()
@@ -89,8 +89,8 @@ def account(request):
     chapters_no_sorted={}
     for i,j in chapters_no :
             chapters_no_sorted[i]=j
-    print(chapters_no)
-    print(chapters_no_sorted)
+    #print(chapters_no)
+    #print(chapters_no_sorted)
     d={'chapters':chapters,'topics':topics,'sub_topics':sub_topics,'chapters_no':chapters_no_sorted}
     return render(request,'study/account.html',d)
 def cs(request):
@@ -115,8 +115,8 @@ def cs(request):
     chapters_no_sorted={}
     for i,j in chapters_no :
             chapters_no_sorted[i]=j
-    print(chapters_no)
-    print(chapters_no_sorted)
+    #print(chapters_no)
+    #print(chapters_no_sorted)
     d={'chapters':chapters,'topics':topics,'sub_topics':sub_topics,'chapters_no':chapters_no_sorted}
     # form = qa(question=b,ans=a)
     # form.save()
