@@ -1,0 +1,135 @@
+.main{
+    position: relative;
+    margin-top: 150px;
+}
+.main .nav{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    align-content: center;
+    z-index: 5;
+    padding: 40px 0;
+    text-align: center;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    border: 5px inset #fff;
+    filter: blure(5px);
+    user-select: none;
+    webkit-tap-highlight-color: transparent;
+}
+.heading{
+    position: relative;
+    top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    }
+
+.heading h1 span{
+    color: black;
+    font-size: 28px;
+    text-shadow: 0 0 5px  #47f912,
+                 0 0 10px #47f912,
+                 0 0 20px  #47f912,
+                 0 0 30px #47f912,
+                 0 0 40px  #47f912;
+    animation: animate 5s linear infinite;
+    transition: 1s;
+    }
+@keyframes animate{
+    0%{
+        filter: hue-rotate(0deg);
+        }
+    100%{
+        filter: hue-rotate(360deg);
+        }
+    }
+        .heading h1 span:nth-child(1){
+            animation-delay: 1s;
+        }
+        .heading h1 span:nth-child(2){
+            animation-delay: 1.5s;
+        }
+        .heading h1 span:nth-child(3){
+            animation-delay: 1.75s;
+        }
+        .heading h1 span:nth-child(4){
+            animation-delay: 2s;
+        }
+        .heading h1 span:nth-child(5){
+            animation-delay: 2s;
+        }
+        .heading h1 span:nth-child(6){
+            animation-delay: 2.5s;
+            color: transparent;
+            font-size: 4vw;
+            text-shadow: none;
+        }
+        .heading h1 span:nth-child(7){
+            animation-delay: 2.75s;
+        }
+        .heading h1 span:nth-child(8){
+            animation-delay: 3s;
+        }
+        .heading h1 span:nth-child(9){
+            animation-delay: 3.5s;
+        }
+        .heading h1 span:nth-child(10){
+            animation-delay: 3.75s;
+            color: transparent;
+            font-size: 4vw;
+            text-shadow: none;
+        }
+        .heading h1 span:nth-child(11){
+            animation-delay: 4s;
+        }
+        .heading h1 span:nth-child(12){
+            animation-delay: 4.5s;
+        }
+        .heading h1 span:nth-child(13){
+            animation-delay: 4.75s;
+        }
+        .heading h1 span:nth-child(14){
+            animation-delay: 5.0s;
+        }
+        .heading h1 span:nth-child(15){
+            animation-delay: 5.5s;
+        }
+        .heading h1 span:nth-child(16){
+            animation-delay: 5.75s;
+            color: transparent;
+            font-size: 4vw;
+            text-shadow: none;
+        }
+        .heading h1 span:nth-child(17){
+            animation-delay: 5.85s;
+        }
+        .heading h1 span:nth-child(18){
+            animation-delay: 6.0s;
+        }
+        .heading h1 span:nth-child(19){
+            animation-delay: 6.5s;
+        }
+        .heading h1 span:nth-child(20){
+            animation-delay: 6.75s;
+        }
+        .heading h1 span:nth-child(21){
+            animation-delay: 6.85s;
+        }
+
+a{
+    text-decoration: none;
+    font-size: 22px;
+}
+.nav:hover {
+    background: rgba(0,0,0,0.8);
+}

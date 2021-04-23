@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <!-- <link rel="stylesheet" href="main.css" type="text/css" media="all" />-->
+        <link rel="stylesheet" href=' {% static "study/main.css" %}' type="text/css" media="all">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial scale=1">
+        <title></title>
+        <style type="text/css" media="all">
+            body{
+                margin: 0;
+                padding: 0;
+                background: #333;
+                /* background: url("../images/Anime Pictures.jpeg") no-repeat; */
+                background: url('{% static "images/4a60d3a279a2be43102b35aa3beef440-3.gif" %}') no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center center;
+                width: 130%;
+                display: flex;
+                flex-direction: column;
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+    
+            }
+        </style>
+    </head>
+<body>
+        {% load static %}
+    
+<!-- Navigation bar -->
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header><span>COMPUTER SCIENCE</span> </header>
+  <ul>
+<li><a href="{%url 'home'%}"><i class="fas fa-home"></i>HOME</a></li>
+<!-- {% for c in chapters %}
+{% if 'CS' in c.id%}
+
+{% for key, v in chapters_no.items %}
+{% if key == c.id%}
+
+<ul id="menu" onclick="document.getElementById('mobilechk').checked=false;">
+                <li><a href="#{{c.id}}">{{c.name}}</a></li>
+                <li><a href="#{{c.id}}" onclick="check.click()"><i class="fas fa-stream"></i>{{v}} {{c.name}}</a></li>
+{% endif %}
+{% endfor %}
+
+{% endif %}
+</ul>
+{% endfor %} -->
+{% for key, v in chapters_no.items %}
+
+{% for c in chapters %}
+{% if 'CS' in c.id%}
+
+{% if key in c.id%}
+<ul id="menu" onclick="document.getElementById('mobilechk').checked=false;">
+				<!-- <li><a href="#{{c.id}}">{{c.name}}</a></li> -->
+				<li><a href="#{{c.id}}" onclick="check.click()"><i class="fas fa-stream"></i>{{v}} {{c.name}}</a></li>
+
+{% endif %}
+
+{% endif %}
+{% endfor %}
+</ul>
+{% endfor %}
+
+</ul>
+</div>
+<div class="heading">
+        <h1>
+        <span>S</span>
+        <span>t</span>
+        <span>u</span>
+        <span>d</span>
+        <span>y</span>
+        <span>_</span>
+<!--         <span>F</span>
+<span>o</span>
+<span>r</span>
+<span>_</span>
+<span>R</span>
+<span>e</span>
+<span>a</span>
+<span>c</span>
+<span>h</span>
+<span>_</span><br />
+<span>D</span>
+<span>r</span>
+<span>e</span>
+<span>a</span>
+<span>m</span>
+ -->        </h1>
+</div>
+{% for c in chapters %}
+{% if 'CS' in c.id%}
+<div class="modal-container" id="{{c.id}}">
+<section>
+    
+    <h2 id="{{c.name}}" class="hed">
+        {{c.name}}
+    </h2>
+    {% for t in topics %}
+    {% ifequal c.id t.id %}
+    <details>
+    <summary>
+        {{t.t_id}}) {{t.name}}
+    </summary>
+    <p>
+        {{t.meaning}}
+    </p>
+    {% for s in sub_topics %}
+    {% ifequal t.t_id s.t_id %}
+    <details>
+    <summary>
+        {{s.s_id}}) {{s.name}}
+    </summary>
+    <p>
+        {{s.meaning}}
+    </p>
+    </details>
+    {% endifequal %}
+    {% endfor %}
+    </details>
+    {% endifequal %}
+    {% endfor %}
+</section>
+</div>
+{% endif %}
+{% endfor %}
+<!-- Trial -->
+
+</body>
+</html>
