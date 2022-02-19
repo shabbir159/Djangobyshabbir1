@@ -124,3 +124,15 @@ def cs(request):
     return render(request,'study/cs.html',d)
 
 # Create your views here.
+def secret(request):
+    a=request.GET.get('message')
+    b={'text':a}
+    # b=request.POST.get('question')
+    # quest=qa.objects.all()
+    # form = qa(question=b,ans=a)
+    # form.save()
+    #={'Qust':quest}
+    print(a)
+    return render(request,'study/secret.html',b)
+def todo(request):
+    return render(request,'study/mytodo.html')

@@ -6,19 +6,9 @@
   text-decoration: none;
 }
 body {
-    /* margin: 0; */
-    /* padding: 0; */
-    /* background: #333; */
-    /* background: url("../images/Anime Pictures.jpeg") no-repeat; */
-    /* background-size: 150% 150%; */
-    /* background-attachment: fixed; */
-    /* width: 130%; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* font-size: 1rem; */
     font-family: 'Roboto', sans-serif;
-    /* align-items: center; */
         }
+
 .sidebar {
   position: fixed;
   z-index: 1;
@@ -233,9 +223,9 @@ details[open] summary ~*{
 }
 @keyframes open
 {
-    0%{ 
-        opacity: 0; 
-        
+    0%{
+        opacity: 0;
+
     }
     100%{
         opacity: 1;
@@ -250,7 +240,7 @@ details summary{
     border-top: 1px solid black;
     position: relative;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
     list-style: none;
 }
@@ -265,7 +255,7 @@ details summary:after{
     font-weight: 200;
     transform-origin: center;
     transition: 1ms linear;
-    
+
 }
 details[open] summary:after{
     transform: rotate(45deg);
@@ -282,7 +272,7 @@ details details summary{
 }
 details p{
     color: rgba(137, 196, 244, 1);
-    font-size: 18px;
+    font-size: 16px;
     margin: 0 0 4px;
     padding-top: 0.5rem;
 }
@@ -303,3 +293,4 @@ details details p{
 .modal-container:target {
 		display: inline;
 			}
+

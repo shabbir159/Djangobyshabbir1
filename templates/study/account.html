@@ -7,32 +7,208 @@
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial scale=1">
-        <title></title>
+        <title>📝 Study Material For Class 12th (Accountancy)</title>
         <style type="text/css" media="all">
-            body{
+html{
                 margin: 0;
                 padding: 0;
-                background: #333;
-                /* background: url("../images/Anime Pictures.jpeg") no-repeat; */
-                background: url('{% static "images/giphy.gif" %}') no-repeat;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
+                background-color: #333;
+                background-image: url('{% static "images/giphy.gif" %}');
+                background-repeat: no-repeat;
+                min-width:100vw;
+                min-height:100vh;
+                background-size: 125% 125%;
                 background-attachment: fixed;
                 background-position: center center;
-                width: 130%;
                 display: flex;
                 flex-direction: column;
                 font-size: 1rem;
-                font-family: 'Roboto', sans-serif;
-    
+                /*font-family: 'Roboto', sans-serif;*/
+
             }
+  /* For mobile devices */
+
+  @media only all and (max-width: 768px) {
+      .logo {
+      /*     The file size of this background image is 93% smaller*/
+      /*to improve page load speed on mobile internet connections*/
+          background-image: url('{% static "images/giphy.gif" %}');
+          background-size: 125% 125%;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-position: center center;
+
+      }
+  }
+  .posning{
+    user-select: none;
+    position: absolute;
+    top: 95px;
+    left: 145px;
+    margin-left: 8px;
+    margin-bottom: 1rem;
+    box-shadow:0 0 5px 3px rgba(0, 119, 200, 0.50);
+}
+/* Colors: Default (blue) */
+.toggle-switchy {color:#fff;}
+.toggle-switchy > input + .toggle:before {
+    content:'Fold';
+
+}
+.toggle-switchy > input + .toggle:after {
+    content:'Unfold';
+
+}
+.toggle-switchy > input + .toggle > .switch {
+    background:rgb(16,150,183);
+}
+.toggle-switchy > input + .toggle + .label {
+    color:#000;
+}
+.toggle-switchy > input:checked + .toggle {
+    background:#063146;
+}
+.toggle-switchy > input:not(:checked) + .toggle {
+    background:rgba(75, 119, 190, 0.50);
+}
+.toggle-switchy > input:checked + .toggle > .switch {
+    border:3px solid #063146;
+}
+.toggle-switchy > input:not(:checked) + .toggle > .switch {
+    border:3px solid rgba(75, 119, 190, 0.50);
+}
+.toggle-switchy > input:focus + .toggle,
+.toggle-switchy > input:active + .toggle {
+    box-shadow:0 0 5px 3px rgba(0, 119, 200, 0.50);
+}
+
+/* Rounded switch corners */
+.toggle-switchy > input + .toggle {
+    border-radius:4px;
+}
+.toggle-switchy > input + .toggle .switch {
+    border-radius:6px;
+}
+
+/* //////////////////////////
+CORE STYLES BELOW - NO TOUCHY
+////////////////////////// */
+.toggle-switchy {
+    display:inline-flex;
+    align-items:center;
+    user-select:none;
+    position:relative;
+    vertical-align:middle;
+    margin-bottom:0;
+}
+.toggle-switchy:hover {
+    cursor:pointer;
+}
+.toggle-switchy > input {
+    position:absolute;
+    opacity:0;
+}
+.toggle-switchy > input + .toggle {
+    align-items: center;
+    position:relative;
+}
+.toggle-switchy > input + .toggle {
+    overflow:hidden;
+    position:relative;
+    flex-shrink:0;
+}
+/* .toggle-switchy > input[disabled] + .toggle {opacity:0.5;}
+.toggle-switchy > input[disabled] + .toggle:hover {cursor:not-allowed;}
+ */
+ .toggle-switchy > input + .toggle {
+     width:100%;
+     height:100%;
+     margin:0;
+     cursor:pointer;
+ }
+.toggle-switchy > input + .toggle > .switch {
+    display:block;
+    height:100%;
+    position:absolute;
+    right:0;
+    z-index:3;
+    box-sizing:border-box;
+}
+
+/* Labels */
+.toggle-switchy > input + .toggle:before,
+.toggle-switchy > input + .toggle:after {
+    display:flex;
+    align-items:center;
+    position:absolute;
+    z-index:2;
+    height:100%;
+}
+.toggle-switchy > input + .toggle:before {
+    right:55%;
+}
+.toggle-switchy > input + .toggle:after {
+    left:50%;
+}
+.toggle-switchy > input + .toggle + .label {
+    margin-left:10px;
+}
+.toggle-switchy[data-label='left'] > input + .toggle {
+    order:2;
+}
+.toggle-switchy[data-label='left'] > input + .toggle + .label {
+    order:1;
+    margin-left:0;
+    margin-right:10px;
+}
+
+/* Show / Hide */
+.toggle-switchy > input + .toggle:before {
+    opacity:0;
+}
+.toggle-switchy > input:checked + .toggle:before {
+    opacity:1;
+}
+.toggle-switchy > input:checked + .toggle:after {
+    opacity:0;
+}
+
+/* Transitions */
+.toggle-switchy > input + .toggle {
+    transition:background 200ms linear, box-shadow 200ms linear;
+}
+.toggle-switchy > input + .toggle:before,
+.toggle-switchy > input + .toggle:after {
+    transition:all 200ms linear;
+}
+.toggle-switchy > input + .toggle > .switch {
+    transition:right 200ms linear, border-color 200ms linear;
+}
+/* //////////////////////////
+CORE STYLES ABOVE - NO TOUCHY
+////////////////////////// */
+/* Size: Default (Medium) */
+.toggle-switchy > input + .toggle{
+    width:85px;
+    height:30px;
+}
+.toggle-switchy > input + .toggle	> .switch{
+    width:30px;
+}
+.toggle-switchy > input + .toggle:before,
+.toggle-switchy > input + .toggle:after	{
+    font-size:0.8rem;
+}
+.toggle-switchy > input:not(:checked) + .toggle > .switch{
+    right:calc(100% - 30px);
+}
+
         </style>
     </head>
 <body>
         {% load static %}
-    
+        {% load myfilter %}
+
 <!-- Navigation bar -->
     <input type="checkbox" id="check">
     <label for="check">
@@ -40,6 +216,15 @@
       <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
+<div class="posning">
+<label for="butt" class="toggle-switchy">
+	<input type="checkbox" id="butt" onclick="myFunction()">
+	<span class="toggle">
+		<span class="switch" id="switch"></span>
+	</span>
+</label>
+</div>
+
     <header><span>ACCOUNTANCY</span> </header>
   <ul>
 <li><a href="{%url 'home'%}"><i class="fas fa-home"></i>HOME</a></li>
@@ -106,27 +291,27 @@
 {% if 'ACC' in c.id%}
 <div class="modal-container" id="{{c.id}}">
 <section>
-    
+
     <h2 id="{{c.name}}" class="hed">
         {{c.name}}
     </h2>
     {% for t in topics %}
     {% ifequal c.id t.id %}
-    <details>
+    <details class='opened'>
     <summary>
-        {{t.t_id}}) {{t.name}}
+        ✍ {{t.name | title }}
     </summary>
     <p>
-        {{t.meaning}}
+        {{t.meaning | linebreaksbr | tabindent }}
     </p>
     {% for s in sub_topics %}
     {% ifequal t.t_id s.t_id %}
-    <details>
+    <details class='opened'>
     <summary>
-        {{s.s_id}}) {{s.name}}
+        ✍ {{s.name | title }}
     </summary>
     <p>
-        {{s.meaning}}
+        {{s.meaning | linebreaksbr | tabindent }}
     </p>
     </details>
     {% endifequal %}
@@ -139,6 +324,31 @@
 {% endif %}
 {% endfor %}
 <!-- Trial -->
+<script>
+function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("butt");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+        console.log("unchecked");
+    var x = document.getElementsByClassName("opened");
+            console.log("Button2 clicked");
+            for(var index=0;index < x.length;index++){
+                x[index].setAttribute("open", "open");
+            }
+  }
+  else {
+    console.log("checked");
+    var x = document.getElementsByClassName("opened");
+            console.log("Button2 clicked");
+            for(var index=0;index < x.length;index++){
+                x[index].removeAttribute("open");
+            }
+
+  }
+}
+      </script>
 
 </body>
 </html>
